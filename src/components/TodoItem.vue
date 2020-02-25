@@ -44,7 +44,12 @@ export default {
   },
   computed: {
     doneToggle () {
-      return this.done ? 'toggle--active' : 'toggle'
+      return this.mutableDoneState ? 'toggle--active' : 'toggle'
+    }
+  },
+  watch: {
+    done (newVal) {
+      this.mutableDoneState = newVal
     }
   },
   created () {

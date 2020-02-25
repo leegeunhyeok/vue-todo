@@ -2,7 +2,14 @@
   <div class="todo__footer">
     <div class="todo__footer__panel">
       <div class="todo__footer__item">
-        <button :class="checkedToggle" @click="toggleItems"></button>
+        <button
+          :style="{ display: filterType === filterTypes.ALL_ITEM
+                    ? 'block'
+                    : 'none'
+          }"
+          :class="checkedToggle" @click="toggleItems"
+        >
+        </button>
       </div>
       <div class="todo__footer__item">
         <button

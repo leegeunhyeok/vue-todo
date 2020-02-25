@@ -48,6 +48,7 @@ export default {
   },
   computed: {
     isAllDone () {
+      console.log(!!this.todos.length && this.todos.every(t => t.done))
       return !!this.todos.length && this.todos.every(t => t.done)
     },
     filteredTodos () {
@@ -104,6 +105,10 @@ export default {
       this.currentFilter = type
     },
     deleteCheckedItems () {
+      if (!confirm('Are you sure?')) {
+        return
+      }
+
       this.todos
         .filter(todo => todo.done)
         .forEach(todo => {
