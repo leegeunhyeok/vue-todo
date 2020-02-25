@@ -84,9 +84,6 @@ export default {
 @import '@/styles/button';
 
 .todo__footer {
-  position: absolute;
-  bottom: -5rem;
-  left: 0;
   width: 100%;
   padding: 1rem;
 

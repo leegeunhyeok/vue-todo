@@ -21,6 +21,10 @@
       :allChecked="isAllDone"
       :filterType="currentFilter"
     />
+    <div class="source-code">
+      <h6>Using Vue</h6>
+      <a href="https://github.com/leegeunhyeok/vue-todo">Source Code</a>
+    </div>
   </div>
 </template>
 
@@ -48,7 +52,6 @@ export default {
   },
   computed: {
     isAllDone () {
-      console.log(!!this.todos.length && this.todos.every(t => t.done))
       return !!this.todos.length && this.todos.every(t => t.done)
     },
     filteredTodos () {
@@ -135,6 +138,7 @@ body {
 }
 
 * {
+  font-family: system-ui;
   box-sizing: border-box;
 }
 
@@ -156,6 +160,22 @@ body {
   &--empty {
     color: #777;
     text-align: center;
+  }
+}
+
+.source-code {
+  text-align: center;
+
+  h6 {
+    margin: 5px 0;
+  }
+
+  a {
+    color: #777;
+
+    &:visited {
+      color: #777;
+    }
   }
 }
 </style>

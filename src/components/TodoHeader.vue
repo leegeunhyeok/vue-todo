@@ -44,11 +44,13 @@ export default {
     outline: none;
     flex-grow: 4;
     height: 3rem;
+    padding: 1rem;
     border: none;
     border-radius: 5px;
-    padding: 1rem;
     font-size: 1rem;
+    background-color: #fff;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    -webkit-appearance: none;
   }
 
   button {
