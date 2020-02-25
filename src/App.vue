@@ -25,6 +25,15 @@
       <h6>Using Vue</h6>
       <a href="https://github.com/leegeunhyeok/vue-todo">Source Code</a>
     </div>
+    <div class="checkout">
+      <a class="react"
+        href="https://docs.geundung.dev/pages/react-todo"
+      >React</a>
+      <a class="vue active"
+        href="https://docs.geundung.dev/pages/vue-todo"
+      >Vue</a>
+      <a class="angular" href="./?">Angluar</a>
+    </div>
   </div>
 </template>
 
@@ -175,6 +184,33 @@ body {
 
     &:visited {
       color: #777;
+    }
+  }
+}
+
+.checkout {
+  margin-top: .5rem;
+  text-align: center;
+
+  a {
+    margin: 0 .5rem;
+    text-decoration: none;
+    font-weight: bold;
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    &.react, &.react:visited {
+      color: #61dbfb;
+    }
+
+    &.vue, &.vue:visited{
+      color: #41b883;
+    }
+
+    &.angular, &.angular:visited {
+      color: #b52e31;
     }
   }
 }
